@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="common_background">#00BB46</color>
-    <color name="text_white">#FFFFFF</color>
+    <color name="common_white">#FFFFFF</color>
+    <color name="common_red">#FF9326</color>
 	
 </resources>
