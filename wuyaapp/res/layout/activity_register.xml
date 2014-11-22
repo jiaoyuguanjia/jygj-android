@@ -10,7 +10,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
-            android:text="3秒快速注册：" />
+            android:text="手机注册：" />
     <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
         <EditText
                 android:id="@+id/input_phone_number"
