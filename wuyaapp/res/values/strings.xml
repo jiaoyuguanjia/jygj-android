@@ -4,8 +4,7 @@
     <string name="app_name">wuyaapp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    
-    
     <string name="open_img_desc">开机页欢迎图片</string>
+    <string name="wuya_img_desc">无涯图标</string>
 
 </resources>
