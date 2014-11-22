@@ -26,6 +26,13 @@
             android:name="com.wuya.app.EntranceActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
+        <activity android:name="com.wuya.app.RegisterActivity" >
+        </activity>
+        <activity
+            android:name="com.wuya.app.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
     </application>
 
 </manifest>

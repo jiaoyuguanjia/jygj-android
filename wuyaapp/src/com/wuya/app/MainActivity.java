@@ -7,6 +7,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+/**
+ * 应用启动页
+ * 
+ * @author xiaocilin
+ * 
+ * @since 2014-11-22
+ * 
+ */
 public class MainActivity extends Activity {
 
 	@Override
@@ -15,12 +23,12 @@ public class MainActivity extends Activity {
 
 		setContentView(R.layout.activity_main);
 
-		final Intent entranceIntent = new Intent(this, EntranceActivity.class);
+		final Intent intent = new Intent(this, EntranceActivity.class);
 		Timer timer = new Timer();
 		TimerTask tast = new TimerTask() {
 			@Override
 			public void run() {
-				startActivity(entranceIntent);
+				startActivity(intent);
 			}
 		};
 		timer.schedule(tast, 3000);

@@ -17,30 +17,48 @@ import android.widget.Button;
  */
 public class EntranceActivity extends Activity implements OnClickListener {
 
+	/*学生注册*/
 	private Button stuRegisterBtn;
+	
+	/*老师注册*/
+	private Button tutorRegisterBtn;
+
+	/*登录*/
+	private Button loginBtn;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_entrance);	
-		
+
 		stuRegisterBtn = (Button) this.findViewById(R.id.student_register);
+		tutorRegisterBtn = (Button) this.findViewById(R.id.tutor_register);
+		loginBtn = (Button) this.findViewById(R.id.login);
+		
 		stuRegisterBtn.setOnClickListener(this);
+		tutorRegisterBtn.setOnClickListener(this);
+		loginBtn.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
+		
 		switch (v.getId()) {
 		case R.id.student_register:
-			startActivity(new Intent(this, StudentRegisterActivity.class));
+			Intent stuIntent = new Intent(this, RegisterActivity.class);
+			stuIntent.putExtra("registerType", "student");
+			startActivity(stuIntent);
 			break;
 		case R.id.tutor_register:
+			Intent tutorIntent = new Intent(this, RegisterActivity.class);
+			tutorIntent.putExtra("registerType", "tutor");
+			startActivity(tutorIntent);
 			break;
 		case R.id.login:
+			startActivity(new Intent(this, LoginActivity.class));
 			break;
 		default:
 			break;
 		}
-		
 	}
 }
