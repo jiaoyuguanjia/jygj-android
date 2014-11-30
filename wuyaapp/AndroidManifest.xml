@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
+        <activity	
             android:name="com.wuya.app.EntranceActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
