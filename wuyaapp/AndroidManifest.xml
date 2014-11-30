@@ -11,10 +11,9 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:label="@string/app_name" >
         <activity
-            android:name="com.wuya.app.MainActivity"
+            android:name="com.wuya.app.AppStartActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,10 +27,9 @@
         </activity>
         <activity android:name="com.wuya.app.RegisterActivity" >
         </activity>
-        <activity
-            android:name="com.wuya.app.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
+        <activity android:name="com.wuya.app.LoginActivity" >
+        </activity>
+        <activity android:name="com.wuya.app.HomeActivity" >
         </activity>
     </application>
 

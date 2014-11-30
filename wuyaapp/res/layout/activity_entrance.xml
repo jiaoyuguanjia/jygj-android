@@ -14,7 +14,7 @@
         android:layout_marginBottom="46dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="42dp"
-        android:contentDescription="@string/wuya_img_desc"
+        android:contentDescription="@string/desc_wuya_icon"
         android:src="@drawable/wuya" />
 
     <TextView

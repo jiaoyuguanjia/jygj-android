@@ -4,22 +4,18 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * 老师，学生登录的Activity
- * 
+ * 首页的窗口
  * @author xiaocilin
  * 
  * @since 2014-11-30
- * 
+ *
  */
-public class LoginActivity extends Activity {
-
+public class HomeActivity extends Activity {
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);	
-		
-		this.setTitle("登录");
+		setContentView(R.layout.activity_home);
 	}
 
-	
 }

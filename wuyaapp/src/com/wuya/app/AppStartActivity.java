@@ -15,22 +15,34 @@ import android.os.Bundle;
  * @since 2014-11-22
  * 
  */
-public class MainActivity extends Activity {
+public class AppStartActivity extends Activity {
+
+	/**
+	 * 下一个要跳转的意图
+	 */
+	private Intent intent;
+	
+	private boolean isLogin = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_app_start);
 
-		final Intent intent = new Intent(this, EntranceActivity.class);
 		Timer timer = new Timer();
 		TimerTask tast = new TimerTask() {
 			@Override
 			public void run() {
+				//TODO:如果用户已经登录，直接跳转到首页
+				if (isLogin) {
+					intent = new Intent(AppStartActivity.this, HomeActivity.class);
+				} else {
+					intent = new Intent(AppStartActivity.this, EntranceActivity.class);
+				}
 				startActivity(intent);
 			}
 		};
-		timer.schedule(tast, 3000);
+		timer.schedule(tast, 1000);
 	}
 }
