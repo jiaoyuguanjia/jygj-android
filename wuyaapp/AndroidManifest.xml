@@ -29,7 +29,9 @@
         </activity>
         <activity android:name="com.wuya.app.LoginActivity" >
         </activity>
-        <activity android:name="com.wuya.app.HomeActivity" >
+        <activity
+                android:name="com.wuya.app.MainActivity"
+                android:label="个人中心">
         </activity>
     </application>
 
