@@ -63,7 +63,7 @@ public class EntranceActivity extends Activity implements OnClickListener {
 			startActivity(new Intent(this, LoginActivity.class));
 			break;
 		case R.id.just_looking:
-			startActivity(new Intent(this, HomeFragment.class));
+			startActivity(new Intent(this, MainActivity.class));
 			break;
 		default:
 			break;

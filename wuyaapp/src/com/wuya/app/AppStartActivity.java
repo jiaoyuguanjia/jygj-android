@@ -36,7 +36,7 @@ public class AppStartActivity extends Activity {
 			public void run() {
 				//TODO:如果用户已经登录，直接跳转到首页
 				if (isLogin) {
-					intent = new Intent(AppStartActivity.this, HomeFragment.class);
+					intent = new Intent(AppStartActivity.this, MainActivity.class);
 				} else {
 					intent = new Intent(AppStartActivity.this, EntranceActivity.class);
 				}
