@@ -39,19 +39,19 @@
                     android:layout_centerVertical="true"/>
         </RelativeLayout>
         <ListView
-                android:id="@+id/student_list_view"
+                android:id="@+id/student_account_list_view"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/student_head"/>
         <Button
-                android:id="@+id/logout_btn"
+                android:id="@+id/student_logout_btn"
                 android:layout_width="260dp"
                 android:layout_height="54dp"
                 android:background="@drawable/logout_btn"
                 android:text="退出登录"
                 android:textColor="#FFFFFF"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/student_list_view"
+                android:layout_below="@id/student_account_list_view"
                 android:layout_marginTop="20dp"/>
     </RelativeLayout>
 

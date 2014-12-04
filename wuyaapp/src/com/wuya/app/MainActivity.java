@@ -1,5 +1,6 @@
 package com.wuya.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -10,6 +11,7 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import com.wuya.app.stu.StudentAccountFragment;
+import com.wuya.app.tutor.TutorAccountFragment;
 
 public class MainActivity extends Activity implements OnClickListener {
 
@@ -19,24 +21,30 @@ public class MainActivity extends Activity implements OnClickListener {
 
     private StudentAccountFragment studentAccountFragment;
 
+    private TutorAccountFragment tutorAccountFragment;
+
     private View homeLayout;
 
     private View findLayout;
 
-    private View studentAccountLayout;
+    private View accountLayout;
 
     private ImageView homeImage;
 
     private ImageView findImage;
 
-    private ImageView studentAccountImage;
+    private ImageView accountImage;
 
     private FragmentManager fragmentManager;
 
     private TextView titleText;
 
+    private String loginType;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Intent intent = getIntent();
+        loginType = intent.getStringExtra("loginType");
         setTheme(R.style.CustomTheme);
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
@@ -56,13 +64,14 @@ public class MainActivity extends Activity implements OnClickListener {
     private void initViews() {
         homeLayout = findViewById(R.id.home_layout);
         findLayout = findViewById(R.id.find_layout);
-        studentAccountLayout = findViewById(R.id.mine_layout);
+        accountLayout = findViewById(R.id.account_layout);
+
         homeImage = (ImageView) findViewById(R.id.home_image);
         findImage = (ImageView) findViewById(R.id.find_image);
-        studentAccountImage = (ImageView) findViewById(R.id.mine_image);
+        accountImage = (ImageView) findViewById(R.id.account_image);
         homeLayout.setOnClickListener(this);
         findLayout.setOnClickListener(this);
-        studentAccountLayout.setOnClickListener(this);
+        accountLayout.setOnClickListener(this);
     }
 
     @Override
@@ -76,7 +85,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 setTabSelection(1);
                 titleText.setText("帮我找");
                 break;
-            case R.id.mine_layout:
+            case R.id.account_layout:
                 setTabSelection(2);
                 titleText.setText("个人中心");
                 break;
@@ -122,14 +131,23 @@ public class MainActivity extends Activity implements OnClickListener {
             case 2:
             default:
                 // 当点击了动态tab时，改变控件的图片和文字颜色
-                studentAccountImage.setImageResource(R.drawable.mine_selected);
-                if (studentAccountFragment == null) {
-                    // 如果NewsFragment为空，则创建一个并添加到界面上
-                    studentAccountFragment = new StudentAccountFragment();
-                    transaction.add(R.id.content, studentAccountFragment);
-                } else {
-                    // 如果NewsFragment不为空，则直接将它显示出来
-                    transaction.show(studentAccountFragment);
+                accountImage.setImageResource(R.drawable.account_selected);
+                if(loginType.equals("student")) {
+                    if (studentAccountFragment == null) {
+                        // 如果NewsFragment为空，则创建一个并添加到界面上
+                        studentAccountFragment = new StudentAccountFragment();
+                        transaction.add(R.id.content, studentAccountFragment);
+                    } else {
+                        // 如果NewsFragment不为空，则直接将它显示出来
+                        transaction.show(studentAccountFragment);
+                    }
+                }else{
+                    if (tutorAccountFragment == null) {
+                        tutorAccountFragment = new TutorAccountFragment();
+                        transaction.add(R.id.content, tutorAccountFragment);
+                    } else {
+                        transaction.show(tutorAccountFragment);
+                    }
                 }
                 break;
         }
@@ -139,7 +157,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private void clearSelection() {
         homeImage.setImageResource(R.drawable.home_unselected);
         findImage.setImageResource(R.drawable.find_unselected);
-        studentAccountImage.setImageResource(R.drawable.mine_unselected);
+        accountImage.setImageResource(R.drawable.account_unselected);
     }
 
     /**
@@ -157,6 +175,9 @@ public class MainActivity extends Activity implements OnClickListener {
         }
         if (studentAccountFragment != null) {
             transaction.hide(studentAccountFragment);
+        }
+        if (tutorAccountFragment != null) {
+            transaction.hide(tutorAccountFragment);
         }
     }
 }

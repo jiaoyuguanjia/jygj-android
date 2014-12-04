@@ -33,8 +33,8 @@ public class HomeFragment extends Fragment implements OnItemClickListener{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		//super.onCreate(savedInstanceState);
-		//setContentView(R.layout.home_layout);
-		View homeLayout = inflater.inflate(R.layout.home_layout,
+		//setContentView(R.layout.home_fragment);
+		View homeLayout = inflater.inflate(R.layout.home_fragment,
 				container, false);
 		gridview = (GridView) homeLayout.findViewById(R.id.category_gridview);
 

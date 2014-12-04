@@ -31,7 +31,8 @@
         </activity>
         <activity
                 android:name="com.wuya.app.MainActivity"
-                android:label="个人中心">
+                android:theme = "@style/CustomTheme"
+                android:label="首页">
         </activity>
     </application>
 

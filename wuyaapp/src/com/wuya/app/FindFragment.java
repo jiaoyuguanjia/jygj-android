@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 public class FindFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View studentLayout = inflater.inflate(R.layout.student_account_layout,
+        View findLayout = inflater.inflate(R.layout.find_fragment,
                 container, false);
-        return studentLayout;
+        return findLayout;
     }
 }
