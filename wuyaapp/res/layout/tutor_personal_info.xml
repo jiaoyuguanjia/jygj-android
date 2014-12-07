@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    android:orientation="vertical" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="姓名"
+                    android:textColor="#000000"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/tutor_input_name"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:hint="请输入姓名"
+                    android:maxLength="50"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/common_gray"
+                    android:textSize="8pt" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="性别"
+                    android:textColor="#000000"
+                    android:textSize="8pt" />
+
+                <TextView
+                    android:id="@+id/totur_gender"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="请选择性别"
+                    android:textColor="@color/common_gray"
+                    android:textSize="8pt" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="教龄(年)"
+                    android:textColor="#000000"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/tutor_input_teaching_age"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:hint="请输入教龄"
+                    android:numeric="integer"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/common_gray"
+                    android:textSize="8pt" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:lines="1"
+                    android:paddingLeft="10dp"
+                    android:text="职业类型"
+                    android:textColor="#000000"
+                    android:textSize="8pt" />
+
+                <TextView
+                    android:id="@+id/tutor_profession"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="请选择职业类型"
+                    android:textColor="@color/common_gray"
+                    android:textSize="8pt" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="67dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="个人简介"
+                    android:textColor="#000000"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/tutor_input_profile"
+                    android:layout_height="60dp"
+                    android:layout_weight="4"
+                    android:hint="请输入个人简历"
+                    android:lines="3"
+                    android:maxLength="500"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/common_gray"
+                    android:textSize="5pt" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_weight="5"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/personal_icon"
+                        android:layout_width="106dp"
+                        android:layout_height="106dp"
+                        android:src="@drawable/person_default_icon" />
+
+                    <TextView
+                        android:id="@+id/tutor_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/personal_icon"
+                        android:gravity="center"
+                        android:text="点击图片修改照片"
+                        android:textSize="7pt" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_weight="5"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/tutor_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一张有亲和力的照片"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tutor_icon_text"
+                        android:paddingTop="5dp"
+                        android:text="拉近您和学生的距离"
+                        android:textSize="8pt" />
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/tutor_personal_center_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_background"
+            android:text="保  存"
+            android:textColor="@color/common_white"
+            android:textSize="14pt" />
+    </RelativeLayout>
+
+</LinearLayout>
