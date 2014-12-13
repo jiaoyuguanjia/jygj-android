@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical" >
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="166dp"
-            android:hint="在这里写下您的要求，我们会尽快帮您寻找合适的老师"/>
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:hint="在这里写下您的要求，我们会尽快帮您寻找合适的老师"
+                android:gravity="top|left"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
@@ -18,21 +18,22 @@
                 android:hint="您的联系方式"/>
 
         <Button
-            android:layout_width="260dp"
-            android:layout_height="54dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="帮我找老师"
-            android:textColor="@color/common_white"
-            android:background="@drawable/find_btn"
-            android:textSize="20dp" />
+                android:layout_width="280dp"
+                android:layout_height="54dp"
+                android:text="帮我找老师"
+                android:textSize="14dp"
+                android:textColor="@color/common_white"
+                android:background="@drawable/find_btn"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="27dp" />
         <Button
                 android:id="@+id/logout_btn"
-                android:layout_width="260dp"
+                android:layout_width="280dp"
                 android:layout_height="54dp"
-                android:background="@drawable/logout_btn"
                 android:text="您也可以联系客服 13111222333"
+                android:textSize="14dp"
                 android:textColor="@color/common_white"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"/>
+                android:background="@drawable/logout_btn"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="22dp"/>
     </LinearLayout>
