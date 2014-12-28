@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/first_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/first_iv"
+            android:layout_width="60dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/first_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="零食/生鲜"
+            android:textColor="#666666" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="fill_parent"
+        android:background="#e5e5e5" />
+
+    <LinearLayout
+        android:id="@+id/second_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/second_iv"
+            android:layout_width="60dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/second_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="零食/生鲜"
+            android:textColor="#666666" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="fill_parent"
+        android:background="#e5e5e5" />
+
+    <LinearLayout
+        android:id="@+id/third_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/third_iv"
+            android:layout_width="60dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/third_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="零食/生鲜"
+            android:textColor="#666666" />
+    </LinearLayout>
+
+</LinearLayout>

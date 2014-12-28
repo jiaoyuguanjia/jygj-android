@@ -12,7 +12,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/common_black"
-       android:textSize="20pt" />
+        android:textSize="20pt" />
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/tutor_icon_head"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_marginLeft="19dip"
+        android:layout_marginTop="14dip"
+        android:src="@drawable/icon_head" />
+
+    <LinearLayout
+        android:id="@+id/tutor_info_rl"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tutor_icon_head"
+        android:layout_alignTop="@id/tutor_icon_head"
+        android:layout_marginLeft="17dip"
+        android:layout_toRightOf="@id/tutor_icon_head"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="周老师" />
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:text="托福雅思，包过百分，不来说你的损失" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/edu_age_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="教龄:"
+                    android:textColor="@color/common_gray" />
+
+                <TextView
+                    android:id="@+id/edu_age_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_toRightOf="@id/edu_age_desc_tv"
+                    android:text="6年"
+                    android:textColor="@color/common_black" />
+
+                <TextView
+                    android:id="@+id/juli_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dip"
+                    android:layout_toRightOf="@id/edu_age_tv"
+                    android:text="距离:"
+                    android:textColor="@color/common_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_toRightOf="@id/juli_desc_tv"
+                    android:text="2公里"
+                    android:textColor="@color/common_black" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dip"
+        android:layout_alignBottom="@id/tutor_info_rl"
+        android:layout_alignTop="@id/tutor_info_rl"
+        android:layout_marginLeft="17dip"
+        android:layout_toRightOf="@id/tutor_info_rl"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/tutor_icon_head"
+            android:layout_width="72dip"
+            android:layout_height="25dip"
+            android:src="@drawable/btn_certified" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥180" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元/小时" />
+    </LinearLayout>
+
+</RelativeLayout>

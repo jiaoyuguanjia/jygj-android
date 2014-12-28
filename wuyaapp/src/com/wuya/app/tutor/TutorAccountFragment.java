@@ -1,12 +1,13 @@
 package com.wuya.app.tutor;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 import com.wuya.app.R;
 
 import java.util.ArrayList;
@@ -50,11 +51,40 @@ public class TutorAccountFragment extends Fragment {
         map7.put("item_title", "修改密码");
         map7.put("item_image", R.drawable.right);
         listItem.add(map7);
-        SimpleAdapter   listItemAdapter = new SimpleAdapter(this.getActivity(),listItem, R.layout.account_list_items,
+        SimpleAdapter listItemAdapter = new SimpleAdapter(getActivity(),listItem, R.layout.account_list_items,
                 new String[] {"item_title","item_image"}, new int[] {R.id.item_title,R.id.item_image}
         );
 
         list.setAdapter(listItemAdapter);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch(position) {
+                    case 0://基础信息
+                        startActivity(new Intent(getActivity(), TutorPersonalCenter.class));
+                        break;
+                    case 1://授课方式
+                        break;
+                    case 2://课程列表
+                        startActivity(new Intent(getActivity(), TutorCourseActivity.class));
+                        break;
+                    case 3://我的履历
+                        startActivity(new Intent(getActivity(), TutorResumeActivity.class));
+                        break;
+                    case 4://我的资质
+                        startActivity(new Intent(getActivity(), TutorQualifyActivity.class));
+                        break;
+                    case 5://个人隐私
+                        startActivity(new Intent(getActivity(), TutorPrivacyActivity.class));
+                        break;
+                    case 6://修改密码
+                        startActivity(new Intent(getActivity(), TutorPasswdActivity.class));
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
         return tutorAccountLayout;
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
  * @since 2014-11-30
  * 
  */
-public class CategoryVo {
+public class CategoryVO {
 
 	/* 类目id */
 	private int id;
@@ -23,9 +23,9 @@ public class CategoryVo {
 	private String color;
 
 	/* 二级类目 */
-	private List<CategoryVo> subcategoryList = Collections.emptyList();
+	private List<CategoryVO> subcategoryList = Collections.emptyList();
 
-	public CategoryVo(int id, String name, String color) {
+	public CategoryVO(int id, String name, String color) {
 		this.id = id;
 		this.name = name;
 		this.color = color;
@@ -55,11 +55,11 @@ public class CategoryVo {
 		this.color = color;
 	}
 
-	public List<CategoryVo> getSubcategoryList() {
+	public List<CategoryVO> getSubcategoryList() {
 		return subcategoryList;
 	}
 
-	public void setSubcategoryList(List<CategoryVo> subcategoryList) {
+	public void setSubcategoryList(List<CategoryVO> subcategoryList) {
 		this.subcategoryList = subcategoryList;
 	}
 
