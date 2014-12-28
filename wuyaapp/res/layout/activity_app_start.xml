@@ -2,7 +2,7 @@
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/common_background"
+    android:background="@color/common_white"
     android:src="@drawable/open"
     android:contentDescription="@string/desc_open_img" >
 

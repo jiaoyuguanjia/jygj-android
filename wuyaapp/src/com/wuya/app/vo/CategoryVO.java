@@ -1,6 +1,6 @@
 package com.wuya.app.vo;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,7 +23,7 @@ public class CategoryVO {
 	private String color;
 
 	/* 二级类目 */
-	private List<CategoryVO> subcategoryList = Collections.emptyList();
+	private List<CategoryVO> subcategoryList = new ArrayList<CategoryVO>();
 
 	public CategoryVO(int id, String name, String color) {
 		this.id = id;
