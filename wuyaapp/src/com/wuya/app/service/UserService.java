@@ -35,7 +35,7 @@ public class UserService {
 			userInfo.setUserToken(jsonObject.getString("userToken"));
 			userInfo.setUsername(jsonObject.getString("username"));
 			userInfo.setPassword(jsonObject.getString("password"));
-			userInfo.setuserIcon(jsonObject.getString("userIcon"));
+			userInfo.setUserIcon(jsonObject.getString("userIcon"));
 			userInfo.setUserType(jsonObject.getString("userType"));
 		} catch (Exception e) {
 			return false;

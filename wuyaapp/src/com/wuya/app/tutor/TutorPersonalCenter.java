@@ -1,7 +1,9 @@
 package com.wuya.app.tutor;
 
 import com.wuya.app.R;
-import com.wuya.app.vo.TutorVo;
+import com.wuya.app.vo.TutorVO;
+import com.wuya.app.vo.enums.Gender;
+import com.wuya.app.vo.enums.ProfessionType;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -22,7 +24,7 @@ public class TutorPersonalCenter extends Activity implements OnClickListener{
 	private TextView tutorProfessionTV;
 	private EditText tutorInputProfileTV;
 	private Button saveBtn;
-	private TutorVo tutorVo;
+	private TutorVO tutorVo;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,15 +55,11 @@ public class TutorPersonalCenter extends Activity implements OnClickListener{
 		    new AlertDialog.Builder(this)
 		    .setTitle("请选择性别")  
 		    .setIcon(android.R.drawable.ic_dialog_info)                  
-		    .setSingleChoiceItems(new String[] {"男","女"}, tutorVo.getGender(),   
+		    .setSingleChoiceItems(new String[] {"男","女"}, tutorVo.getGender().getCode(),   
 		      new DialogInterface.OnClickListener() {         
 		         public void onClick(DialogInterface dialog, int which) {  
-		        	tutorVo.setGender(which);
-		    		if(tutorVo.getGender() == 0){
-		    			tutorGenderTV.setText("男");
-		    		}else{
-		    			tutorGenderTV.setText("女");
-		    		}	        	
+		        	tutorVo.setGender(Gender.valueOf(which));
+		        	tutorGenderTV.setText(tutorVo.getGender().getMessage());
 		            dialog.dismiss();  
 		         }  
 		      }  
@@ -73,15 +71,11 @@ public class TutorPersonalCenter extends Activity implements OnClickListener{
 		    new AlertDialog.Builder(this)
 		    .setTitle("请选择职业类型")  
 		    .setIcon(android.R.drawable.ic_dialog_info)                  
-		    .setSingleChoiceItems(new String[] {"大学生兼职","在职教师"}, tutorVo.getProfession()==null?null:tutorVo.getProfession()-1,   
+		    .setSingleChoiceItems(new String[] {"大学生兼职","在职教师"}, tutorVo.getProfession()==null?null:tutorVo.getProfession().getCode(),   
 		      new DialogInterface.OnClickListener() {         
 		         public void onClick(DialogInterface dialog, int which) {  
-		        	tutorVo.setProfession(which+1);
-		    		if(which == 0){
-		    			tutorProfessionTV.setText("大学生兼职");
-		    		}else{
-		    			tutorProfessionTV.setText("在职教师");
-		    		}	        	
+		        	tutorVo.setProfession(ProfessionType.valueOf(which));
+		        	tutorProfessionTV.setText(tutorVo.getProfession().getMessage());
 		            dialog.dismiss();  
 		         }  
 		      }  
@@ -102,11 +96,11 @@ public class TutorPersonalCenter extends Activity implements OnClickListener{
      */
     private void initTutorInfo(){
         //TODO 后台请求
-    	tutorVo = new TutorVo();
+    	tutorVo = new TutorVO();
     	tutorVo.setRealName("周老师");
-    	tutorVo.setGender(0);
+    	tutorVo.setGender(Gender.MALE);
     	tutorVo.setTeachingAge(8);
-    	tutorVo.setProfession(2);
+    	tutorVo.setProfession(ProfessionType.INSERVICE_TEACHER);
     	tutorVo.setProfile("我从业8年，的基督教路赛多利斯");
     }
     /**
@@ -121,21 +115,13 @@ public class TutorPersonalCenter extends Activity implements OnClickListener{
     		tutorInputNameTV.setText(tutorVo.getRealName());
     	}
     	if(tutorVo.getGender() != null){
-    		if(tutorVo.getGender() == 0){
-    			tutorGenderTV.setText("男");
-    		}else{
-    			tutorGenderTV.setText("女");
-    		}
+    		tutorGenderTV.setText(tutorVo.getGender().getMessage());
     	}
     	if(tutorVo.getTeachingAge() != null){
     		tutorInputTeachingAgeTV.setText(tutorVo.getTeachingAge()+"");
     	}
     	if(tutorVo.getProfession() != null){
-    		if(tutorVo.getGender() == 1){
-    			tutorProfessionTV.setText("大学生兼职");
-    		}else{
-    			tutorProfessionTV.setText("在职教师");
-    		}
+    		tutorProfessionTV.setText(tutorVo.getProfession().getMessage());
     	}
     	if(!TextUtils.isEmpty(tutorVo.getProfile())){
     		tutorInputProfileTV.setText(tutorVo.getProfile());
@@ -149,17 +135,16 @@ public class TutorPersonalCenter extends Activity implements OnClickListener{
     		return;
     	}
     	tutorVo.setRealName(tutorInputNameTV.getText().toString());
-    	tutorVo.setGender(tutorGenderTV.getText().toString());
+    	tutorVo.setGender(Gender.valueOf(Integer.parseInt(tutorGenderTV.getText().toString())));
     	String ageStr = tutorInputTeachingAgeTV.getText().toString();
     	tutorVo.setTeachingAge(TextUtils.isEmpty(ageStr)?null:Integer.valueOf(ageStr));
-    	tutorVo.setProfession(tutorProfessionTV.getText().toString());
+    	tutorVo.setProfession(ProfessionType.valueOf(Integer.parseInt(tutorProfessionTV.getText().toString())));
     	tutorVo.setProfile(tutorInputProfileTV.getText().toString());
     	
     	if(TextUtils.isEmpty(tutorVo.getRealName())){
     		Toast.makeText(this, "请输入名称", Toast.LENGTH_SHORT).show();
     		return;
     	}
-    	//TODO
-    	Toast.makeText(this, "保存成功:"+tutorVo.toString(), Toast.LENGTH_LONG).show();
+    	Toast.makeText(this, "保存老师基本信息成功", Toast.LENGTH_LONG).show();
     }
 }

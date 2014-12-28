@@ -51,6 +51,7 @@ public class MainActivity extends Activity implements OnClickListener {
         setContentView(R.layout.activity_main);
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title_bar);
         titleText =(TextView) findViewById(R.id.title_text);
+        titleText.setText("首页");
         // 初始化布局元素
         initViews();
         fragmentManager = getFragmentManager();

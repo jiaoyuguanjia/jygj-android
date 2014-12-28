@@ -22,15 +22,17 @@
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/tutor_name_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="周老师" />
 
         <TextView
+            android:id="@+id/tutor_profile_tv"
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dip"
-            android:text="托福雅思，包过百分，不来说你的损失" />
+            android:text="托福雅思，包过百分，不来是你的损失" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -67,6 +69,7 @@
                     android:textColor="@color/common_gray" />
 
                 <TextView
+                    android:id="@+id/tutor_juli_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="1dip"

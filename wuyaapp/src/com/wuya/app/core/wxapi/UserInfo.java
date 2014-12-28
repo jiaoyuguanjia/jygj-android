@@ -71,7 +71,7 @@ public class UserInfo {
 		return spHelper.getString(Const.LOGIN_USER_ICON);
 	}
 
-	public void setuserIcon(String userIcon) {
+	public void setUserIcon(String userIcon) {
 		spHelper.putString(Const.LOGIN_USER_ICON, userIcon);
 	}
 

@@ -18,7 +18,6 @@ import com.wuya.app.adapter.CategoryExpandableListAdapter;
 import com.wuya.app.api.CategoryApi;
 import com.wuya.app.api.TutorApi;
 import com.wuya.app.vo.CategoryVO;
-import com.wuya.app.vo.TutorVo;
 
 /**
  * 首页的窗口
@@ -32,7 +31,7 @@ public class HomeFragment extends Fragment implements OnGroupExpandListener {
 
 	private List<List<CategoryVO>> categoryVosList = new ArrayList<List<CategoryVO>>();
 	
-	private List<TutorVo> tutorVoList = new ArrayList<TutorVo>();
+	private List<Map<String, Object>> tutorVoMapList = new ArrayList<Map<String, Object>>();
 
 	private ExpandableListView categoryLv;
 	
@@ -52,23 +51,26 @@ public class HomeFragment extends Fragment implements OnGroupExpandListener {
 
 		categoryLv = (ExpandableListView) homeLayout.findViewById(R.id.category_lv);
 		categoryLv.setGroupIndicator(null);//去掉默认箭头
-		
 		newTutorLv = (ListView) homeLayout.findViewById(R.id.newly_tutor_list);
 		
 		categoryVosList = categoryApi.getCategoryVosList();
-		tutorVoList = tutorApi.getNewlyTutorList();
-		
-		
 		categoryAdapter = new CategoryExpandableListAdapter(getActivity().getApplicationContext(), categoryLv, categoryVosList);
-		
-		List<Map<String, Object>> data = new ArrayList<Map<String,Object>>();
-		String[] from = new String[]{};
-		int[] to = new int[]{};
-		newlyTutorAdapter = new SimpleAdapter(getActivity().getApplicationContext(), data, R.layout.newly_tutor_item, from, to);
-		
 		categoryLv.setAdapter(categoryAdapter);
-		
 		categoryLv.setOnGroupExpandListener(this);
+		
+		
+		try {
+			tutorVoMapList = tutorApi.getNewlyTutorMapList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		String[] from = new String[]{"alias", "profile", "teachingAge"};
+		int[] to = new int[]{R.id.tutor_name_tv, R.id.tutor_profile_tv, R.id.edu_age_tv};
+		newlyTutorAdapter = new SimpleAdapter(getActivity().getApplicationContext(), tutorVoMapList, R.layout.newly_tutor_item, from, to);
+		
+		newTutorLv.setAdapter(newlyTutorAdapter);
+		
+	
 		return homeLayout;
 	}
 
