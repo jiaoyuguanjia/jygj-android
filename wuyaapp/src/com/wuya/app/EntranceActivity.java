@@ -55,17 +55,20 @@ public class EntranceActivity extends Activity implements OnClickListener {
 			startActivity(stuIntent);
 			break;
 		case R.id.tutor_register:
-			Intent tutorIntent = new Intent(this, RegisterActivity.class);
+			/*Intent tutorIntent = new Intent(this, RegisterActivity.class);
 			tutorIntent.putExtra("registerType", "tutor");
-			startActivity(tutorIntent);
+			startActivity(tutorIntent);*/
+			Intent mainIntent = new Intent(this, MainActivity.class);
+			mainIntent.putExtra("loginType", "tutor");
+			startActivity(mainIntent);
 			break;
 		case R.id.login:
 			startActivity(new Intent(this, LoginActivity.class));
 			break;
 		case R.id.just_looking:
-			Intent mainIntent = new Intent(this, MainActivity.class);
+			/*Intent mainIntent = new Intent(this, MainActivity.class);
 			mainIntent.putExtra("loginType", "tutor");
-			startActivity(mainIntent);
+			startActivity(mainIntent);*/
 			break;
 		default:
 			break;
