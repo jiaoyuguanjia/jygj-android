@@ -20,11 +20,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.wuya.app.EntranceActivity"
@@ -49,7 +44,8 @@
         </activity>
         <activity android:name="com.wuya.app.tutor.TutorPrivacyActivity" >
         </activity>
-        <activity android:name="com.wuya.app.tutor.TutorPasswdActivity" >        </activity>
+        <activity android:name="com.wuya.app.tutor.TutorPasswdActivity" >
+        </activity>
     </application>
 
 </manifest>
