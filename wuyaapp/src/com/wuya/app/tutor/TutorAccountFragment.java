@@ -69,7 +69,7 @@ public class TutorAccountFragment extends Fragment {
                     	startActivity(new Intent(getActivity(), TutorTimingActivity.class));
                         break;
                     case 2://课程列表
-                        startActivity(new Intent(getActivity(), TutorCourseActivity.class));
+                        startActivity(new Intent(getActivity(), TutorCourseListActivity.class));
                         break;
                     case 3://我的履历
                         startActivity(new Intent(getActivity(), TutorResumeActivity.class));
