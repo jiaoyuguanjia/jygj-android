@@ -38,6 +38,8 @@
         </activity>
         <activity android:name="com.wuya.app.tutor.TutorPersonalCenter" >
         </activity>
+        <activity android:name="com.wuya.app.tutor.TutorCourseListActivity" >
+        </activity>
         <activity android:name="com.wuya.app.tutor.TutorCourseActivity" >
         </activity>
         <activity android:name="com.wuya.app.tutor.TutorResumeActivity" >

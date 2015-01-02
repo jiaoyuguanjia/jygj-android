@@ -14,14 +14,13 @@
             android:layout_height="wrap_content" >
 
             <TableRow android:layout_width="match_parent" >
-
                 <TextView
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical|left"
                     android:paddingLeft="10dp"
                     android:text="上课方式"
-                    android:textColor="@color/common_gray"
+                    android:textColor="#000000"
                     android:textSize="18dp" />
 
                 <TextView
@@ -29,9 +28,8 @@
                     android:layout_height="60dp"
                     android:layout_weight="3"
                     android:gravity="center_vertical|left"
-                    android:paddingLeft="10dp"
-                    android:text="点击选择"
-                    android:textColor="#000000"
+                    android:text="请点击选择"
+                    android:textColor="@color/common_gray"
                     android:textSize="18dp" />
             </TableRow>
 
@@ -50,7 +48,7 @@
                     android:gravity="center_vertical|left"
                     android:paddingLeft="10dp"
                     android:text="上课时间"
-                    android:textColor="@color/common_gray"
+                    android:textColor="#000000"
                     android:textSize="18dp" />
             </TableRow>
 
@@ -70,7 +68,7 @@
                     android:gravity="center"
                     android:text="周一"
                     android:textColor="#000000"
-                    android:textSize="9dp" />
+                    android:textSize="16dp" />
 				<TextView
                     android:layout_height="25dp"
                     android:layout_weight="1"
@@ -78,7 +76,7 @@
                     android:gravity="center"
                     android:text="周二"
                     android:textColor="#000000"
-                    android:textSize="9dp" />
+                    android:textSize="16dp" />
 				<TextView
                     android:layout_height="25dp"
                     android:layout_weight="1"
@@ -86,7 +84,7 @@
                     android:gravity="center"
                     android:text="周三"
                     android:textColor="#000000"
-                    android:textSize="9dp" />
+                    android:textSize="16dp" />
 				<TextView
                     android:layout_height="25dp"
                     android:layout_weight="1"
@@ -94,7 +92,7 @@
                     android:gravity="center"
                     android:text="周四"
                     android:textColor="#000000"
-                    android:textSize="9dp" />
+                    android:textSize="16dp" />
 				<TextView
                     android:layout_height="25dp"
                     android:layout_weight="1"
@@ -102,7 +100,7 @@
                     android:gravity="center"
                     android:text="周五"
                     android:textColor="#000000"
-                    android:textSize="9dp" />
+                    android:textSize="16dp" />
 				<TextView
                     android:layout_height="25dp"
                     android:layout_weight="1"
@@ -110,7 +108,7 @@
                     android:gravity="center"
                     android:text="周六"
                     android:textColor="#000000"
-                    android:textSize="9dp" />
+                    android:textSize="16dp" />
 				<TextView
                     android:layout_height="25dp"
                     android:layout_weight="1"
@@ -118,7 +116,7 @@
                     android:gravity="center"
                     android:text="周日"
                     android:textColor="#000000"
-                    android:textSize="9dp" />
+                    android:textSize="16dp" />
             </TableRow>
             <TableRow android:layout_width="match_parent" 
                 android:background="@color/common_gray">
@@ -130,31 +128,31 @@
 				    android:layout_weight="1"
 	                android:layout_width="0dp">
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="上"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="下"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="晚"/>			    
 			    </LinearLayout>
                 <LinearLayout
@@ -164,31 +162,31 @@
 				    android:layout_weight="1"
 	                android:layout_width="0dp">
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="上"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="下"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="晚"/>			    
 			    </LinearLayout>
                 <LinearLayout
@@ -198,31 +196,31 @@
 				    android:layout_weight="1"
 	                android:layout_width="0dp">
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="上"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="下"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="晚"/>			    
 			    </LinearLayout>
                 <LinearLayout
@@ -232,31 +230,31 @@
 				    android:layout_weight="1"
 	                android:layout_width="0dp">
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="上"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="下"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="晚"/>			    
 			    </LinearLayout>
                 <LinearLayout
@@ -266,31 +264,31 @@
 				    android:layout_weight="1"
 	                android:layout_width="0dp">
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="上"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="下"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="晚"/>			    
 			    </LinearLayout>
                 <LinearLayout
@@ -300,31 +298,31 @@
 				    android:layout_weight="1"
 	                android:layout_width="0dp">
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="上"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="下"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_selected"
 	                    android:textColor="@color/tutor_timing_font_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="晚"/>			    
 			    </LinearLayout>
                 <LinearLayout
@@ -334,51 +332,105 @@
 				    android:layout_weight="1"
 	                android:layout_width="0dp">
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="上"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="下"/>
 					<TextView
-	                    android:layout_height="30dp"
+	                    android:layout_height="45dp"
 	                    android:layout_width="match_parent"
 	                    android:gravity="center"
 	                    android:layout_margin="0.1dp"
 	                    android:background="@color/tutor_timing_bg_not_selected"
 	                    android:textColor="@color/tutor_timing_font_not_selected"
-	                    android:textSize="9dp" 
+	                    android:textSize="16dp" 
 	                    android:text="晚"/>			    
 			    </LinearLayout>			    			    			    			    			                 
             </TableRow>
             <TableRow android:layout_width="match_parent">
                  <TextView
-                    android:layout_height="10dp"
+                    android:layout_height="30dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical|left"
                     android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:text="●可约课"
                     android:textColor="@color/tutor_timing_bg_selected"
-                    android:textSize="9dp" /> 
+                    android:textSize="16dp" />
                 <TextView
-                    android:layout_height="10dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_weight="6"
+                    android:gravity="center_vertical|left"
+                    android:text="●不可约课"
+                    android:textColor="@color/tutor_timing_bg_not_selected"
+                    android:textSize="16dp" /> 
+                    
+            </TableRow>
+            <TableRow android:layout_width="match_parent" >
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+            <TableRow android:layout_width="match_parent" >
+                <TextView
+                    android:layout_height="60dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical|left"
                     android:paddingLeft="10dp"
-                    android:text="●可约课"
-                    android:textColor="@color/tutor_timing_bg_not_selected"
-                    android:textSize="9dp" /> 
+                    android:text="约课备注"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/totur_tutoring_remark"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical|left"
+                    android:lines="3"
+                    android:maxLength="500"
+                    android:textColor="@color/common_gray"
+                    android:textSize="14dp" />
+            </TableRow>
+            <TableRow android:layout_width="match_parent" >
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+            <TableRow android:layout_width="match_parent" >
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="授课区域"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/totur_tutoring_location"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical|left"
+                    android:text="请点击选择"
+                    android:textColor="@color/common_gray"
+                    android:textSize="18dp" />
             </TableRow>
         </TableLayout>
     </ScrollView>
