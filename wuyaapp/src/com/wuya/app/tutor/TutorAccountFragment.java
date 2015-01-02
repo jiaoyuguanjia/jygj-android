@@ -63,7 +63,7 @@ public class TutorAccountFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch(position) {
                     case 0://基础信息
-                        startActivity(new Intent(getActivity(), TutorPersonalCenter.class));
+                        startActivity(new Intent(getActivity(), TutorPersonalCenterActivity.class));
                         break;
                     case 1://授课方式
                     	startActivity(new Intent(getActivity(), TutorTimingActivity.class));
