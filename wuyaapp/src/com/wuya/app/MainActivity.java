@@ -3,7 +3,6 @@ package com.wuya.app;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import com.wuya.app.core.wxapi.UserInfo;
 import com.wuya.app.stu.StudentAccountFragment;
 import com.wuya.app.tutor.TutorAccountFragment;
+import com.wuya.app.vo.enums.UserType;
 
 public class MainActivity extends Activity implements OnClickListener {
 
@@ -41,12 +41,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
     private TextView titleText;
 
-    private String loginType;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Intent intent = getIntent();
-        loginType = intent.getStringExtra("loginType");
         setTheme(R.style.CustomTheme);
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
@@ -85,18 +81,18 @@ public class MainActivity extends Activity implements OnClickListener {
                 titleText.setText("首页");
                 break;
             case R.id.find_layout:
-            	if (!UserInfo.isLogin()) {
-            		startActivity(new Intent(this, EntranceActivity.class));
-            		return;
-            	}
+            	/*if (!UserInfo.isLogin()) {
+	        		startActivity(new Intent(this, EntranceActivity.class));
+	        		return;
+	        	}*/
                 setTabSelection(1);
                 titleText.setText("帮我找");
                 break;
             case R.id.account_layout:
-            	if (!UserInfo.isLogin()) {
+            	/*if (!UserInfo.isLogin()) {
             		startActivity(new Intent(this, EntranceActivity.class));
             		return;
-            	}
+            	}*/
             	setTabSelection(2);
             	titleText.setText("个人中心");
                 break;
@@ -143,7 +139,7 @@ public class MainActivity extends Activity implements OnClickListener {
             default:
                 // 当点击了动态tab时，改变控件的图片和文字颜色
                 accountImage.setImageResource(R.drawable.account_selected);
-                if(loginType.equals("student")) {
+                if(UserType.STUDENT.name() == UserInfo.getUserType()) {
                     if (studentAccountFragment == null) {
                         // 如果NewsFragment为空，则创建一个并添加到界面上
                         studentAccountFragment = new StudentAccountFragment();

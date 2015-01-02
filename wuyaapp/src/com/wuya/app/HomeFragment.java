@@ -15,8 +15,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.wuya.app.adapter.CategoryExpandableListAdapter;
-import com.wuya.app.api.CategoryApi;
-import com.wuya.app.api.TutorApi;
+import com.wuya.app.service.CategoryApi;
+import com.wuya.app.service.TutorApi;
 import com.wuya.app.vo.CategoryVO;
 
 /**
