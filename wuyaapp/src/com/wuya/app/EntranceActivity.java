@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
 
 /**
  * 登录，注册的入口页
@@ -27,8 +26,6 @@ public class EntranceActivity extends Activity implements OnClickListener {
 	/*登录*/
 	private Button loginBtn;
 	
-	private TextView justLookingTv;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,12 +34,10 @@ public class EntranceActivity extends Activity implements OnClickListener {
 		stuRegisterBtn = (Button) this.findViewById(R.id.student_register);
 		tutorRegisterBtn = (Button) this.findViewById(R.id.tutor_register);
 		loginBtn = (Button) this.findViewById(R.id.login);
-		justLookingTv = (TextView) this.findViewById(R.id.just_looking);
 		
 		stuRegisterBtn.setOnClickListener(this);
 		tutorRegisterBtn.setOnClickListener(this);
 		loginBtn.setOnClickListener(this);
-		justLookingTv.setOnClickListener(this);
 	}
 
 	@Override
@@ -61,11 +56,6 @@ public class EntranceActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.login:
 			startActivity(new Intent(this, LoginActivity.class));
-			break;
-		case R.id.just_looking:
-			Intent mainIntent = new Intent(this, MainActivity.class);
-			mainIntent.putExtra("loginType", "tutor");
-			startActivity(mainIntent);
 			break;
 		default:
 			break;

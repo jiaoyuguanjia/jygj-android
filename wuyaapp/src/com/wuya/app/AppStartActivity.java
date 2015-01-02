@@ -21,8 +21,6 @@ public class AppStartActivity extends Activity {
 	 * 下一个要跳转的意图
 	 */
 	private Intent intent;
-	
-	private boolean isLogin = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +32,7 @@ public class AppStartActivity extends Activity {
 		TimerTask tast = new TimerTask() {
 			@Override
 			public void run() {
-				//TODO:如果用户已经登录，直接跳转到首页
-				if (isLogin) {
-					intent = new Intent(AppStartActivity.this, MainActivity.class);
-				} else {
-					intent = new Intent(AppStartActivity.this, EntranceActivity.class);
-				}
+				intent = new Intent(AppStartActivity.this, MainActivity.class);
 				startActivity(intent);
 			}
 		};

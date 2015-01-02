@@ -7,14 +7,31 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
-public class SharedPreferencesHelper {
+import com.wuya.app.core.GlobalConfig;
+
+public class SpManager {
 
 	private SharedPreferences sp;
+	
+	private static SpManager instance;
+	
+	private static Object lock = new Object();
 
-	public SharedPreferencesHelper(Context context) {
+	public SpManager(Context context) {
 		this.sp = context.getSharedPreferences(Const.STORE_NAME, Context.MODE_PRIVATE);
 	}
-
+	
+	public static SpManager getInstance() {
+		if (instance == null) {
+			synchronized (lock) {
+				if (instance == null) {
+					instance = new SpManager(GlobalConfig.getMyApplication());
+				}
+			}
+		}
+		return instance;
+	}
+	
 	/**
 	 * 
 	 * @param valueParams

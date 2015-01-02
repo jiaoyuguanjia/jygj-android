@@ -1,15 +1,17 @@
 package com.wuya.app;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.wuya.app.core.wxapi.UserInfo;
 import com.wuya.app.stu.StudentAccountFragment;
 import com.wuya.app.tutor.TutorAccountFragment;
 
@@ -83,12 +85,20 @@ public class MainActivity extends Activity implements OnClickListener {
                 titleText.setText("首页");
                 break;
             case R.id.find_layout:
+            	if (!UserInfo.isLogin()) {
+            		startActivity(new Intent(this, EntranceActivity.class));
+            		return;
+            	}
                 setTabSelection(1);
                 titleText.setText("帮我找");
                 break;
             case R.id.account_layout:
-                setTabSelection(2);
-                titleText.setText("个人中心");
+            	if (!UserInfo.isLogin()) {
+            		startActivity(new Intent(this, EntranceActivity.class));
+            		return;
+            	}
+            	setTabSelection(2);
+            	titleText.setText("个人中心");
                 break;
             default:
                 break;

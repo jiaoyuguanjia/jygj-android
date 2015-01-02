@@ -4,71 +4,66 @@
     android:id="@+id/entrance_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/common_background"
+    android:background="@color/common_white"
     android:orientation="vertical"
     tools:context="com.wuya.app.EntranceActivity" >
 
     <ImageView
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="46dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="42dp"
-        android:contentDescription="@string/desc_wuya_icon"
-        android:src="@drawable/wuya" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:layout_marginLeft="30dp"
-        android:text="还没有帐号?"
-        android:textColor="@color/common_white" />
-
-    <Button
-        android:id="@+id/student_register"
-        android:layout_width="312dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="18dp"
-        android:layout_marginLeft="30dp"
-        android:background="@color/common_red"
-        android:text="我是学生"
-        android:textColor="@color/common_white" />
-
-    <Button
-        android:id="@+id/tutor_register"
-        android:layout_width="312dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="46dp"
-        android:layout_marginLeft="30dp"
-        android:background="@color/common_red"
-        android:text="我是老师"
-        android:textColor="@color/common_white" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:layout_marginLeft="30dp"
-        android:text="已有帐号"
-        android:textColor="@color/common_white" />
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="312dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="72dp"
-        android:layout_marginLeft="30dp"
-        android:background="@color/common_red"
-        android:text="立即登录"
-        android:textColor="@color/common_white" />
-
-    <TextView
-        android:id="@+id/just_looking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="先随便看看>>"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="85dp"
+        android:src="@drawable/login_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="95dp"
+        android:text="您还未登录，赶紧先登录吧～"
+        android:textColor="@color/common_gray" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:background="@color/common_background"
+        android:text="立即登录"
         android:textColor="@color/common_white" />
+    
+      <ImageView
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/or" />
+
+    <RelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/student_register"
+            android:layout_width="145dp"
+            android:layout_height="50dp"
+            android:background="@color/common_red"
+            android:text="我是学生"
+            android:textColor="@color/common_white" />
+
+        <Button
+            android:id="@+id/tutor_register"
+            android:layout_width="145dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/student_register"
+            android:background="@color/common_red"
+            android:text="我是老师"
+            android:textColor="@color/common_white" />
+    </RelativeLayout>
 
 </LinearLayout>
