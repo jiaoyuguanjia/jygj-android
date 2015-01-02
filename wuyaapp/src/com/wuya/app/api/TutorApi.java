@@ -35,5 +35,4 @@ public class TutorApi {
 	public List<Map<String, Object>> getNewlyTutorMapList() throws Exception {
 		return ReflectionUtils.getMapList(getNewlyTutorList());
 	}
-
 }
