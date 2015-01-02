@@ -33,7 +33,6 @@
         </activity>
         <activity
             android:name="com.wuya.app.MainActivity"
-            android:label="首页"
             android:theme="@style/CustomTheme" >
         </activity>
         <activity android:name="com.wuya.app.tutor.TutorPersonalCenter" >
@@ -51,6 +50,8 @@
         <activity android:name="com.wuya.app.tutor.TutorPasswdActivity" >
         </activity>
         <activity android:name="com.wuya.app.tutor.TutorTimingActivity" >
+        </activity>
+        <activity android:name="com.wuya.app.TutorSearchActivity" >
         </activity>
     </application>
 

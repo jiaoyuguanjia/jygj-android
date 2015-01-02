@@ -22,7 +22,10 @@ public class CategoryVO {
 	/* 类目显示颜色 */
 	private String color;
 
-	/* 二级类目 */
+	/* 是否有下级类目 */
+	private boolean hasChildCategory;
+
+	/* 下级类目 */
 	private List<CategoryVO> subcategoryList = new ArrayList<CategoryVO>();
 
 	public CategoryVO(int id, String name, String color) {
@@ -61,6 +64,14 @@ public class CategoryVO {
 
 	public void setSubcategoryList(List<CategoryVO> subcategoryList) {
 		this.subcategoryList = subcategoryList;
+	}
+
+	public boolean getHasChildCategory() {
+		return this.hasChildCategory;
+	}
+
+	public void setHasChildCategory(boolean hasChildCategory) {
+		this.hasChildCategory = hasChildCategory;
 	}
 
 }

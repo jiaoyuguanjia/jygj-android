@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment implements OnGroupExpandListener {
 		newTutorLv = (ListView) homeLayout.findViewById(R.id.newly_tutor_list);
 		
 		categoryVosList = categoryApi.getCategoryVosList();
-		categoryAdapter = new CategoryExpandableListAdapter(getActivity().getApplicationContext(), categoryLv, categoryVosList);
+		categoryAdapter = new CategoryExpandableListAdapter(getActivity(), categoryLv, categoryVosList);
 		categoryLv.setAdapter(categoryAdapter);
 		categoryLv.setOnGroupExpandListener(this);
 		
@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment implements OnGroupExpandListener {
 		}
 		String[] from = new String[]{"alias", "profile", "teachingAge"};
 		int[] to = new int[]{R.id.tutor_name_tv, R.id.tutor_profile_tv, R.id.edu_age_tv};
-		newlyTutorAdapter = new SimpleAdapter(getActivity().getApplicationContext(), tutorVoMapList, R.layout.newly_tutor_item, from, to);
+		newlyTutorAdapter = new SimpleAdapter(getActivity().getApplicationContext(), tutorVoMapList, R.layout.tutor_item, from, to);
 		
 		newTutorLv.setAdapter(newlyTutorAdapter);
 		

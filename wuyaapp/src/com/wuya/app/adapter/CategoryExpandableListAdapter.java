@@ -3,11 +3,11 @@ package com.wuya.app.adapter;
 import java.util.List;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.wuya.app.R;
+import com.wuya.app.TutorSearchActivity;
 import com.wuya.app.vo.CategoryVO;
 
 /**
@@ -261,9 +262,9 @@ public class CategoryExpandableListAdapter extends BaseExpandableListAdapter {
 		return true;
 	}
 
-	public class OnChildCategoryListener implements OnClickListener {
+	class OnChildCategoryListener implements OnClickListener {
 		private CategoryVO second;
-		private int position;
+		private int position;//打track用的
 
 		public OnChildCategoryListener(CategoryVO categoryVO, int position) {
 			this.second = categoryVO;
@@ -272,6 +273,11 @@ public class CategoryExpandableListAdapter extends BaseExpandableListAdapter {
 
 		@Override
 		public void onClick(View v) {
+			Intent intent = new Intent(context, TutorSearchActivity.class);
+			intent.putExtra("hasChildCategory", second.getHasChildCategory());
+			intent.putExtra("parentCategoryId", second.getId());
+			intent.putExtra("parentCategoryName", second.getName());
+			context.startActivity(intent);
 		}
 
 	}
