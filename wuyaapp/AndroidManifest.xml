@@ -46,6 +46,8 @@
         </activity>
         <activity android:name="com.wuya.app.tutor.TutorPasswdActivity" >
         </activity>
+        <activity android:name="com.wuya.app.tutor.TutorTimingActivity" >
+        </activity>
     </application>
 
 </manifest>
