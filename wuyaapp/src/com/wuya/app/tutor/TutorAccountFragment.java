@@ -1,17 +1,19 @@
 package com.wuya.app.tutor;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
-import com.wuya.app.R;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import com.wuya.app.R;
 
 /**
  * Created by shengwei on 2014/12/3.
@@ -64,6 +66,7 @@ public class TutorAccountFragment extends Fragment {
                         startActivity(new Intent(getActivity(), TutorPersonalCenter.class));
                         break;
                     case 1://授课方式
+                    	startActivity(new Intent(getActivity(), TutorTimingActivity.class));
                         break;
                     case 2://课程列表
                         startActivity(new Intent(getActivity(), TutorCourseActivity.class));
