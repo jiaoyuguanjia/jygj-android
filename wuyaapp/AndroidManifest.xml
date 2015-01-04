@@ -35,7 +35,7 @@
             android:name="com.wuya.app.MainActivity"
             android:theme="@style/CustomTheme" >
         </activity>
-        <activity android:name="com.wuya.app.tutor.TutorPersonalCenter" >
+        <activity android:name="com.wuya.app.tutor.TutorPersonalCenterActivity" >
         </activity>
         <activity android:name="com.wuya.app.tutor.TutorCourseListActivity" >
         </activity>
