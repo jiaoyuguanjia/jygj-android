@@ -56,4 +56,12 @@ public class SpManager {
 	public String getString(String key) {
 		return sp.getString(key, "");
 	}
+	
+	public void putBoolean(String key, Boolean value) {
+		sp.edit().putBoolean(key, value).commit();
+	}
+	
+	public Boolean getBoolean(String key) {
+		return sp.getBoolean(key, Boolean.FALSE);
+	}
 }

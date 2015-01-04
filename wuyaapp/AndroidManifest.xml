@@ -24,6 +24,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.wuya.app.GuideActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
             android:name="com.wuya.app.EntranceActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>

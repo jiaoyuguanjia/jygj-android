@@ -3,6 +3,9 @@ package com.wuya.app;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import com.wuya.app.core.wxapi.Const;
+import com.wuya.app.core.wxapi.SpManager;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,17 +28,26 @@ public class AppStartActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		Boolean isFirstUse = SpManager.getInstance().getBoolean(Const.ACTIVITY_GUIDE);
+		if (!isFirstUse) {
+			intent = new Intent(AppStartActivity.this, GuideActivity.class);
+			startActivity(intent);
+			finish();
+		} else {
+			setContentView(R.layout.activity_app_start);
 
-		setContentView(R.layout.activity_app_start);
-
-		Timer timer = new Timer();
-		TimerTask tast = new TimerTask() {
-			@Override
-			public void run() {
-				intent = new Intent(AppStartActivity.this, MainActivity.class);
-				startActivity(intent);
-			}
-		};
-		timer.schedule(tast, 1000);
+			Timer timer = new Timer();
+			TimerTask tast = new TimerTask() {
+				@Override
+				public void run() {
+					intent = new Intent(AppStartActivity.this, MainActivity.class);
+					startActivity(intent);
+					finish();
+				}
+			};
+			timer.schedule(tast, 1000);
+		}
+		
 	}
 }

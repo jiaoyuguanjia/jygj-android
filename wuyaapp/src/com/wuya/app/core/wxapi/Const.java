@@ -9,5 +9,8 @@ public interface Const {
 	public static final String LOGIN_USER_ID = "LOGIN_USER_ID";
 	public static final String LOGIN_USER_ICON = "LOGIN_USER_ICON";
 	public static final String LOGIN_USER_TYPE = "LOGIN_USER_TYPE";
+	
+	/*引导页面*/
+	public static final String ACTIVITY_GUIDE = "ACTIVITY_GUIDE";
 
 }

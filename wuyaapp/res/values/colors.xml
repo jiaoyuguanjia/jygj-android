@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- 透明色 -->
+    <color name="transparent">#00ffffff</color>
+    
     <color name="common_background">#00BB46</color>
     <color name="common_white">#FFFFFF</color>
     <color name="common_red">#FF9326</color>
     <color name="common_gray">#B2B2B2</color>
     <color name="common_black">#464646</color>
     <color name="common_green">#2DC258</color>
-    
     <color name="tutor_timing_line">#FFFFFF</color>
     <color name="tutor_timing_bg_selected">#03B387</color>
     <color name="tutor_timing_bg_not_selected">#ADE0CD</color>

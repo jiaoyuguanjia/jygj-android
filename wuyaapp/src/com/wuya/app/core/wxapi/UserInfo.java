@@ -3,7 +3,6 @@ package com.wuya.app.core.wxapi;
 import android.content.Intent;
 import android.text.TextUtils;
 
-import com.wuya.app.EntranceActivity;
 import com.wuya.app.LoginActivity;
 import com.wuya.app.core.GlobalConfig;
 import com.wuya.app.core.se.AESUtils;

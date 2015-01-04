@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-package com.wuya.app.tutor;
-
-import android.app.Activity;
-import android.os.Bundle;
-
-public class TutorCourseListActivity extends Activity {
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		
-		
-	}
-}
-=======
 package com.wuya.app.tutor;
 
 import java.util.ArrayList;
@@ -77,4 +62,3 @@ public class TutorCourseListActivity extends Activity {
         });   
     }  
 }
->>>>>>> 87a5a6ccb73cdf34d0e2627c846fe9d54c1062f7
