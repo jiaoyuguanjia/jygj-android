@@ -1,8 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    android:orientation="vertical" >
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="课程分类"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/tutor_course_c1"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:hint="选择1级分类"
+                    android:maxLength="50"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/common_gray"
+                    android:textSize="18dp" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/tutor_course_c2"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:hint="选择2级分类"
+                    android:maxLength="50"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/common_gray"
+                    android:textSize="18dp" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/tutor_course_c3"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:hint="选择3级分类"
+                    android:maxLength="50"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/common_gray"
+                    android:textSize="18dp" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="课程收费"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/tutor_course_duration"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:hint="单位：元"
+                    android:maxLength="50"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/common_gray"
+                    android:textSize="18dp" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="课程时间"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/tutor_course_duration"
+                    android:layout_height="60dp"
+                    android:layout_weight="3"
+                    android:hint="单位：小时"
+                    android:maxLength="50"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/common_gray"
+                    android:textSize="18dp" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <View
+                    android:layout_height="0.1dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_gray" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="课程简介"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/find_btn"
+            android:text="保 存"
+            android:textColor="@color/common_white"
+            android:textSize="24dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/logout_btn"
+            android:text="删除课程"
+            android:textColor="@color/common_white"
+            android:textSize="24dp" />
 
 </LinearLayout>

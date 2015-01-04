@@ -12,7 +12,7 @@ public class TutorTimingActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        setContentView(R.layout.tutor_timing);
+        setContentView(R.layout.tutor_timing_activity);
 	}
 	@Override
 	public void onClick(View v) {

@@ -6,6 +6,7 @@
     <color name="common_red">#FF9326</color>
     <color name="common_gray">#B2B2B2</color>
     <color name="common_black">#464646</color>
+    <color name="common_green">#2DC258</color>
     
     <color name="tutor_timing_line">#FFFFFF</color>
     <color name="tutor_timing_bg_selected">#03B387</color>
